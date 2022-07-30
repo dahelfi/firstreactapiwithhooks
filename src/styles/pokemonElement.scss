@@ -1,0 +1,50 @@
+.element{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+
+    img{
+        position: absolute;
+        right: 30px;
+        width: 10rem;
+    }
+
+
+    .element-name{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+    }
+
+    .element-order{
+
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+  
+  }
+
+  .typeList{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30px;
+    top: 70px;
+    color: black;
+    
+
+ 
+
+  }
+

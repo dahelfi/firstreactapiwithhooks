@@ -1,0 +1,15 @@
+.background{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-image: url('../assets/ws_Just_grass_2560x1600.jpg');
+  position: fixed;
+  z-index: -1000;
+
+}
+
+.pokemonOverView{
+  z-index: 5;
+}

@@ -1,0 +1,150 @@
+.pokemon-card{
+
+    width: 25vw;
+    height: 80vh;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.pokemon-card-background{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-card-top-section{
+    width: 100%;
+    height: 55%;
+    z-index: -3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    h1{
+        position: absolute;
+        color: white;
+        left: 40px;
+        top: 40px;
+
+    }
+
+
+}
+
+.pokemon-card-bottom-section{
+    width: 100%;
+    height: 55%;
+    margin-top: -50px;
+    background-color: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    color: white;
+   
+
+    
+    img{
+        margin-top: -250px;
+        width: 20rem;
+        object-fit: contain;
+        z-index: 1000;
+    }
+
+}
+
+.description{
+    margin-top: -10px;
+    display: flex; 
+    justify-content: space-between;
+    width: 60%;
+    cursor: pointer;
+    h2{
+        margin-bottom: 2px;
+    }
+
+    .testElement{
+        border-bottom: 2px solid rgb(90,204,189) ;
+    }
+}
+
+
+.facts-section{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 90%;
+}
+
+@media(max-width: 1500px){
+    .pokemon-card{
+
+        width: 40vw;
+        max-width: 450px;
+        
+        
+    }
+}
+
+
+@media(max-width: 1100px){
+    .pokemon-card{
+
+        width: 50vw;
+        
+        
+    }
+}
+
+@media(max-width: 900px){
+    .pokemon-card{
+        width: 70vw;
+  
+    }
+
+    .description{
+
+        width: 70%;
+    
+    }
+}
+
+
+@media(max-width: 600px){
+    .pokemon-card{
+        margin-top: -5px;
+        width: 90vw;
+        
+        
+    }
+}
+
+@media(max-width: 500px){
+    .pokemon-card{
+
+        width: 95vw;
+        
+        
+    }
+
+    .description{
+
+        width: 80%;
+    
+    }
+
+    .pokemon-card{
+
+        height: 85vh;
+
+    }
+}

@@ -1,0 +1,34 @@
+*{
+    p{
+        font-size: 25px;
+    }
+}
+
+.about-element{
+    width: 80%;
+    display: flex;
+    
+}
+
+.about-element-description{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+}
+
+.about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.about-section-worth{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+}

@@ -1,0 +1,36 @@
+*{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .element{
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    cursor: pointer;
+  
+  }
+  
+  .overview-background{
+     z-index: 5;
+      
+    
+    display: flex;
+  
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    justify-content: center;
+  
+    min-height: 100vh;
+    
+  }

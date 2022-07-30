@@ -1,0 +1,19 @@
+.moves-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+}
+
+.moves-element{
+    height: 60px;
+}
+
+@media(max-width: 700px){
+
+    .moves-element{
+        height: 50px;
+    }
+
+}

@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import './styles/app.scss'
+import {PokemonOverview} from './components/PokemonOverview';
+import {PokemonCard} from './components/PokemonCard';
 
-function App() {
+
+
+export const App = () => {
+  const [currentPokemon, setCurrentPokemon] = useState<any>(null);
+  const [showPokemonCard, setShowPokemonCard] = useState(false);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    
+    const fetchData = async() =>{
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50&offset=5');
+      const data = await response.json();
+      
+      setItems(data.results);
+    
+    }
+    fetchData();
+    
+    },[]);
+
+  const retreatToOverview = () =>{
+    setShowPokemonCard(false);
+  }
+
+  const showPokemonCardFunction = (id: number) =>{
+
+    
+   items.forEach((item, elementId: number) =>{
+
+    if(elementId === id){  
+      setCurrentPokemon(item);
+      setShowPokemonCard(true);
+    }
+   })
+
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+    <PokemonOverview showAndHide={showPokemonCard} showElement={showPokemonCardFunction} items={items}/>
+    <PokemonCard showAndHide={showPokemonCard} retreatOverview={retreatToOverview} currentPokemon={currentPokemon} /> 
+   <div className="background"/>
+   </div>
+  )
 }
-
-export default App;
